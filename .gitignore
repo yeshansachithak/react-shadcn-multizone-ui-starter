@@ -43,3 +43,4 @@ coverage/
 
 # Optional: Mac/Linux lock files
 *.lock
+.DS_Store
