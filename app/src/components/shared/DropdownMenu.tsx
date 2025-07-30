@@ -1,5 +1,10 @@
-import { DropdownMenu as ShadDropdownMenu } from "@/components/ui/dropdown-menu";
+import * as Base from "@/components/ui/dropdown-menu";
 
-export const DropdownMenu = (props: React.ComponentProps<typeof ShadDropdownMenu>) => {
-  return <ShadDropdownMenu {...props} />;
-};
+export const DropdownMenu = Base.DropdownMenu;
+export const DropdownMenuTrigger = Base.DropdownMenuTrigger;
+export const DropdownMenuContent = Base.DropdownMenuContent;
+export const DropdownMenuLabel = Base.DropdownMenuLabel;
+export const DropdownMenuSeparator = Base.DropdownMenuSeparator;
+export const DropdownMenuGroup = Base.DropdownMenuGroup;
+export const DropdownMenuItem = Base.DropdownMenuItem;
+export const DropdownMenuShortcut = Base.DropdownMenuShortcut;

@@ -1,5 +1,6 @@
-import { Tabs as ShadTabs } from "@/components/ui/tabs";
+import * as Base from "@/components/ui/tabs";
 
-export const Tabs = (props: React.ComponentProps<typeof ShadTabs>) => {
-  return <ShadTabs {...props} />;
-};
+export const Tabs = Base.Tabs;
+export const TabsList = Base.TabsList;
+export const TabsTrigger = Base.TabsTrigger;
+export const TabsContent = Base.TabsContent;

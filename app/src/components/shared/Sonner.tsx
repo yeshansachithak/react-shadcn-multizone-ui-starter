@@ -1,5 +1,9 @@
-import { Toaster } from "@/components/ui/sonner";
+import { Toaster as BaseToaster } from "@/components/ui/sonner";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Sonner = (props: React.ComponentProps<typeof Toaster>) => {
-  return <Toaster {...props} />;
-};
+type SonnerProps = ComponentProps<typeof BaseToaster>;
+
+export function Sonner(props: SonnerProps) {
+  return <BaseToaster className={cn("text-sm", props.className)} {...props} />;
+}

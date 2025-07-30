@@ -1,5 +1,9 @@
-import { Table as ShadTable } from "@/components/ui/table";
+import { Table as BaseTable } from "@/components/ui/table";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Table = (props: React.ComponentProps<typeof ShadTable>) => {
-  return <ShadTable {...props} />;
-};
+type TableProps = ComponentProps<typeof BaseTable>;
+
+export function Table(props: TableProps) {
+  return <BaseTable className={cn("text-sm", props.className)} {...props} />;
+}

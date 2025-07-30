@@ -1,5 +1,9 @@
-import { Checkbox as ShadCheckbox } from "@/components/ui/checkbox";
+import { Checkbox as BaseCheckbox } from "@/components/ui/checkbox";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Checkbox = (props: React.ComponentProps<typeof ShadCheckbox>) => {
-  return <ShadCheckbox {...props} />;
-};
+type CheckboxProps = ComponentProps<typeof BaseCheckbox>;
+
+export function Checkbox(props: CheckboxProps) {
+  return <BaseCheckbox className={cn("text-sm", props.className)} {...props} />;
+}

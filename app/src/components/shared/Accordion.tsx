@@ -1,5 +1,9 @@
-import { Accordion as ShadAccordion } from "@/components/ui/accordion";
+import { Accordion as BaseAccordion } from "@/components/ui/accordion";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Accordion = (props: React.ComponentProps<typeof ShadAccordion>) => {
-  return <ShadAccordion {...props} />;
-};
+type AccordionProps = ComponentProps<typeof BaseAccordion>;
+
+export function Accordion(props: AccordionProps) {
+  return <BaseAccordion className={cn("text-sm", props.className)} {...props} />;
+}

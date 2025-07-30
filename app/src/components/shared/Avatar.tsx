@@ -1,5 +1,9 @@
-import { Avatar as ShadAvatar } from "@/components/ui/avatar";
+import { Avatar as BaseAvatar } from "@/components/ui/avatar";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Avatar = (props: React.ComponentProps<typeof ShadAvatar>) => {
-  return <ShadAvatar {...props} />;
-};
+type AvatarProps = ComponentProps<typeof BaseAvatar>;
+
+export function Avatar(props: AvatarProps) {
+  return <BaseAvatar className={cn("text-sm", props.className)} {...props} />;
+}

@@ -1,5 +1,9 @@
-import { Calendar as ShadCalendar } from "@/components/ui/calendar";
+import { Calendar as BaseCalendar } from "@/components/ui/calendar";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Calendar = (props: React.ComponentProps<typeof ShadCalendar>) => {
-  return <ShadCalendar {...props} />;
-};
+type CalendarProps = ComponentProps<typeof BaseCalendar>;
+
+export function Calendar(props: CalendarProps) {
+  return <BaseCalendar className={cn("text-sm", props.className)} {...props} />;
+}

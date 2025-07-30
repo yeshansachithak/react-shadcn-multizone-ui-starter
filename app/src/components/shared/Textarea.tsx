@@ -1,5 +1,9 @@
-import { Textarea as ShadTextarea } from "@/components/ui/textarea";
+import { Textarea as BaseTextarea } from "@/components/ui/textarea";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Textarea = (props: React.ComponentProps<typeof ShadTextarea>) => {
-  return <ShadTextarea {...props} />;
-};
+type TextareaProps = ComponentProps<typeof BaseTextarea>;
+
+export function Textarea(props: TextareaProps) {
+  return <BaseTextarea className={cn("text-sm", props.className)} {...props} />;
+}

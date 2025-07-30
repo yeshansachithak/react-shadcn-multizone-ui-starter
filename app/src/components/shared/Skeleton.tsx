@@ -1,5 +1,9 @@
-import { Skeleton as ShadSkeleton } from "@/components/ui/skeleton";
+import { Skeleton as BaseSkeleton } from "@/components/ui/skeleton";
+import type { ComponentProps } from "react";
+import { cn } from "@/lib/utils";
 
-export const Skeleton = (props: React.ComponentProps<typeof ShadSkeleton>) => {
-  return <ShadSkeleton {...props} />;
-};
+type SkeletonProps = ComponentProps<typeof BaseSkeleton>;
+
+export function Skeleton(props: SkeletonProps) {
+  return <BaseSkeleton className={cn("text-sm", props.className)} {...props} />;
+}
