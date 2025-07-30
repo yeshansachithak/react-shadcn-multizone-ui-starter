@@ -4,6 +4,8 @@ import { cn } from "@/lib/utils";
 
 type SonnerProps = ComponentProps<typeof BaseToaster>;
 
-export function Sonner(props: SonnerProps) {
-  return <BaseToaster className={cn("text-sm", props.className)} {...props} />;
+export function Sonner({ className, ...props }: SonnerProps) {
+  return (
+    <BaseToaster {...props} className={cn("text-sm", className)} />
+  );
 }
